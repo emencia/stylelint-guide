@@ -3,6 +3,18 @@
 Sass syntax guide with Stylelint
 ================================
 
+What?
+*****
+
+This repository contains:
+
+* A `Stylelint`_ rules configuration file ``.stylelintrc.json``;
+* A scss reference file for valid syntax ``scss/valid.scss``;
+* A scss reference file for invalid syntax ``scss/invalid.scss``;
+* A makefile with some actions to test reference files against rule configuration file;
+
+Reference files contains some comments to explain what is valid and invalid.
+
 Why?
 ****
 
@@ -11,7 +23,7 @@ To ensure readability and maintenance of our Sass sources.
 How?
 ****
 
-Using `Stylelint`_ with a rules configuration file shipped in this repository as ``.stylelintrc.json``.
+Using `Stylelint`_ with rules configuration file shipped in this repository.
 
 You need to install Stylelint before, we recommend to install it globally: ::
 
