@@ -1,0 +1,109 @@
+/*
+ * Multiline comment
+ *
+ * Plop
+ */
+
+// Basic single line comment
+
+/// Single line comment for sassdoc
+
+@charset "UTF-8";
+
+@import "settings";
+
+@include foundation-global-styles;
+
+// Every rules separated with at least one empty line;
+.foo{}
+
+// Indentation is always 4 spaces
+.bar{
+    .yep{}
+}
+
+// Descendant selector
+.mip .map{}
+
+.ping{
+    // Pseudo element always with double ":"
+    &::after{}
+}
+
+.pong{
+    // Combinator (+, >, ~, etc..) allways separated with spaces around
+    & + .pang{}
+
+    & > .pung{}
+
+    & ~ .pyng{}
+}
+
+// Properties
+.props{
+    width: 1px; // Property name is allways lowercase
+}
+
+// Values
+.values{
+    display: block; // Value name is allways lowercase
+}
+
+// Correct unit type are required
+.units{
+    font-size: 1px;
+    line-height: 1;
+    margin: 1em;
+    width: 1%;
+    height: 2rem;
+    top: 1vh;
+    left: 1vw;
+    border-width: 1pt;
+    transform: rotate(30deg);
+}
+
+// Number below 1 allways starts with 0
+.numbers{
+    line-height: 1;
+    border-width: 0.5;
+}
+
+// Color in long hexa and lowercase
+.colors{
+    $black: #000000;
+    color: #ffffff;
+    border-left-color: $black;
+    border-right-color: rgb(#ff0000);
+    border-top-color: rgba($black, 1);
+}
+
+// Single declaration with no space around
+.a {color: #ffffff;}
+
+// Multiline declaration
+.b {
+    color: #ffffff;
+    top: 0;
+}
+
+// Blocks
+a { color: #ffffff; }
+b { color: #000000; }
+
+// No spaces in operator and value is double quoted
+a[target="_blank"] {}
+
+// Variables
+$var1: "plop";
+$var2: "plip" !default;
+
+$var3-1: "plap";
+
+@if $var1 {
+    .row{}
+}
+
+// Vendor prefixes are authorized
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+    -moz-osx-font-smoothing: grayscale;
+}
