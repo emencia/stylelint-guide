@@ -7,40 +7,65 @@
 // Always use double quote
 @import 'settings';
 
+// Empty block is forbidden
+.empty{}
+
 // Rules need to be separated with one empty line
-.foo1{}
-.foo2{}
+.foo1{
+    font-size: 1rem;
+}
+.foo2{
+    font-size: 1rem;
+}
 
 // No more than 2 empty lines between rules
-.foo3{}
+.foo3{
+    font-size: 1rem;
+}
 
 
 
-.foo4{}
-.foo4{} // No selector duplication in the same stylesheet
+.foo4{
+    font-size: 1rem;
+}
+
+// No selector duplication in the same stylesheet
+.foo4{
+    font-size: 1rem;
+}
 
 // Descendant selector must be on the same line separated with 1 space
 .mip
-.map{}
+.map{
+    font-size: 1rem;
+}
 
 // Required indentation is allways 4 spaces
 .bar{
-  .nope1{}
-        .nope2{}
+  .nope1{font-size: 1rem;}
+        .nope2{font-size: 1rem;}
 }
 
 .ping{
     // Pseudo element always with double ":"
-    &:after{}
+    &:after{
+        font-size: 1rem;
+    }
 }
 
 // Combinator (+, >, ~, etc..) allways separated with spaces around
 .pong{
-    &+ .pang{}
+    &+ .pang{
+        font-size: 1rem;
+    }
 
-    & >.pung{}
+    & >.pung{
+        font-size: 1rem;
+    }
 
-    &~.pyng{}
+    &~.pyng{
+        font-size: 1rem;
+    }
 }
 
 // Properties

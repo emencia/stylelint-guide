@@ -15,28 +15,52 @@
 @include foundation-global-styles;
 
 // Every rules separated with at least one empty line;
-.foo{}
+.foo{
+    font-size: 1rem;
+}
 
 // Indentation is always 4 spaces
 .bar{
-    .yep{}
+    .yep{
+        font-size: 1rem;
+    }
+
+    .yip{
+        font-size: 1rem;
+    }
+}
+
+.bar2{
+    .yep{font-size: 1rem;}
+
+    .yip{font-size: 1rem;}
 }
 
 // Descendant selector
-.mip .map{}
+.mip .map{
+    font-size: 1rem;
+}
 
 .ping{
     // Pseudo element always with double ":"
-    &::after{}
+    &::after{
+        font-size: 1rem;
+    }
 }
 
 .pong{
     // Combinator (+, >, ~, etc..) allways separated with spaces around
-    & + .pang{}
+    & + .pang{
+        font-size: 1rem;
+    }
 
-    & > .pung{}
+    & > .pung{
+        font-size: 1rem;
+    }
 
-    & ~ .pyng{}
+    & ~ .pyng{
+        font-size: 1rem;
+    }
 }
 
 // Properties
@@ -91,7 +115,9 @@ a { color: #ffffff; }
 b { color: #000000; }
 
 // No spaces in operator and value is double quoted
-a[target="_blank"] {}
+a[target="_blank"] {
+    font-size: 1rem;
+}
 
 // Variables
 $var1: "plop";
@@ -99,8 +125,21 @@ $var2: "plip" !default;
 
 $var3-1: "plap";
 
+// @if and @else directive
 @if $var1 {
-    .row{}
+    .row1{
+        font-size: 1rem;
+    }
+}
+
+@if $var2 {
+    .row2{
+        font-size: 1rem;
+    }
+} @else {
+    .row3{
+        font-size: 1rem;
+    }
 }
 
 // Vendor prefixes are authorized

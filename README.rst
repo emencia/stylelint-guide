@@ -1,4 +1,5 @@
 .. _Stylelint: https://stylelint.io/
+.. _Stylelint Scss plugin: https://github.com/kristerkari/stylelint-scss
 
 Sass syntax guide with Stylelint
 ================================
@@ -47,9 +48,11 @@ rules configuration file.
 How?
 ****
 
-Using `Stylelint`_ with rules configuration file shipped in this repository.
+Use `Stylelint`_ with rules configuration file shipped in this repository.
 
-You need to install Stylelint before, we recommend to install it globally: ::
+You need to install Stylelint before, we
+recommend to do it globally (once done you will not have to do it again for
+every other projects on the same machine): ::
 
     npm install -g stylelint
 
