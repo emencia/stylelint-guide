@@ -1,0 +1,39 @@
+/// Everything here should be correct from any lint rules
+
+/// Variables required by stylesheets
+$white: #ffffff;
+$black: #000000;
+$grey: #f8f7f6;
+$theme-colors: (
+    "black": $black,
+    "grey": $grey,
+    "white": $white,
+);
+$hero-veil-desktop: true;
+
+// Dummy functions required by stylesheets
+@function rem-calc($values) {
+    @return $values;
+}
+
+// Dummy mixins required by stylesheets
+@mixin mixin-foo($value: $black) {
+    background: $value;
+}
+
+@mixin mixin-bar($value: $white) {
+    background: $value;
+}
+
+// Existing selectors extended by stylesheets
+.bg-grey {
+    background-color: $grey;
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-white {
+    color: $white;
+}

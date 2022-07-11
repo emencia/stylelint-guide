@@ -1,0 +1,204 @@
+///
+// Main frontend layout styles
+//
+//
+///
+
+// at-rule-empty-line-before
+@import "./dummy";
+
+@import "./requirements";
+
+// selector-type-case
+H1 {
+    color: $black;
+}
+
+.block-no-empty {}
+
+.property-case {
+    WIDTH: 1px;
+}
+
+.value-keyword-case {
+    display: BLOCK;
+}
+
+// Indentation
+.creepy-indentation-closing-block {
+    background: $grey;
+    }
+.creepy-indentation-property {
+  background: $grey;
+}
+
+.string-quotes {
+  content: 'nope';
+}
+
+.font-family-name-quotes {
+    font-family: Nunito Sans, sans-serif;
+}
+
+.font-family-no-missing-generic-family-keyword {
+    font-family: "Nunito Sans";
+}
+
+.function-parentheses-space-inside {
+    background: linear-gradient(to top, $black 15%, rgba($black, 0.3) 40%, rgba($black, 0) 100%, );
+}
+
+.at-if-no-null {
+    @if $hero-veil-desktop != null {
+        font-size: 10px;
+    }
+}
+
+.scss-operator-no-unspaced {
+    @if $hero-veil-desktop !=true {
+        font-size: 10px;
+    }
+}
+
+.selector-class-pattern {
+    .plipBlack {
+        color: $black;
+    }
+
+    .plipWHITE {
+        color: $white;
+    }
+
+    .PLIPGREY {
+        color: $grey;
+    }
+}
+
+.block-opening-brace-space
+{text-decoration: none;}
+
+$card-height:372px;
+$card-body-height:172px;
+.block-opening-brace-space-all{
+    @include mixin-foo;
+    border: 0 !important;
+    @include mixin-bar();
+    .loop-block {
+        @each $color,
+        $value in $theme-colors {
+            .plop-#{$color} {
+                @include mixin-foo($value);
+            }
+        }
+    }
+}
+
+.need-single-whitespaces {
+    height: $card-height;
+    .foo {
+        height: 100%;
+    }
+}
+
+.twice-same-property {
+    height: $card-height;
+    height: 100%;
+}
+
+.space-between-operator {
+    width: calc(100%-10px);
+}
+
+.length-zero-no-unit {
+    box-shadow: 0 0 0px 5px #ffffff;
+}
+
+.color-hex-case {
+    color: #FFFFFF;
+}
+
+.color-hex-length {
+    color: #fff;
+}
+
+.color-named {
+    color: white;
+}
+
+.no-duplicate-selectors {
+    .foo {
+        color: $black;
+    }
+
+    .bar {
+        color: $white;
+    }
+
+    .foo {
+        color: $grey;
+    }
+}
+
+.semi-colon-missing-mixed {
+    display: flex;
+    z-index: 3
+}
+
+.semi-colon-missing-single {
+    z-index: 4
+}
+
+.semi-colon-twice {
+    height: 200px;;
+}
+
+.selector-attribute-quotes {
+    [class*=" icon-"],
+    [class^=icon-] {
+        display: flex;
+    }
+}
+
+.selector-combinator-space {
+    &+ .before {
+        font-size: 1rem;
+    }
+
+    & >.after {
+        font-size: 1rem;
+    }
+
+    &~.around {
+        font-size: 1rem;
+    }
+}
+
+
+.selector-pseudo-element-colon-notation {
+    &:after {
+        font-size: 1rem;
+    }
+}
+
+.valid-but-to-watch {
+    .at-extend-no-missing-placeholder {
+        a {
+            @extend #{".bg-grey",".text-black"};
+
+            &:hover {
+                @extend #{".text-white"};
+            }
+        }
+    }
+
+    .no-duplicate-selectors-allowed {
+        .foo,
+        .bar {
+            color: $white;
+        }
+
+        .foo {
+            color: $grey;
+        }
+    }
+}
