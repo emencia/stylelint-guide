@@ -1,4 +1,6 @@
 /// Everything here should be correct from any lint rules
+// Hex color are allowed here.
+/* stylelint-disable color-no-hex */
 
 /// Variables required by stylesheets
 $white: #ffffff;
@@ -37,3 +39,4 @@ $hero-veil-desktop: true;
 .text-white {
     color: $white;
 }
+/* stylelint-enable color-no-hex */

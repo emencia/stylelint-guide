@@ -1,0 +1,20 @@
+///
+// Currently valid rules but watched for lint fixes
+///
+
+
+// We still accept @extend without placeholder until Bootstrap5 have added them
+.at-extend-no-missing-placeholder {
+    a {
+        @extend #{".bg-grey"};
+
+        &:hover {
+            @extend #{".text-white"};
+        }
+    }
+}
+
+// There is currently no available rule to enforce a space after comma in this case
+.missing-space-after-comma {
+    @extend #{".bg-blue-secondary",".text-white"};
+}

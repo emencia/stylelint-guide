@@ -79,12 +79,12 @@ implemented the fix in a dedicated Makefile action: ::
 This will copy sources into a ``cleaned/`` directory then fix them, the original
 sources are left untouched.
 
-Also Stylelint is not able to fix all the deficient parts. If there is still some
-failures that Stylelint is unable to automatically fix it will display them once it
-has finished fixes.
+Not all lint issues can be automatically fixed by Stylelint for different reasons. In
+case there is some unfixable issues, Stylelint will display them once it has finished
+fixes. You will have to fix them yourself.
 
 For sanity, there is a Makefile action to compile Sass to CSS to ensure everything is
-still safe. It will compile bad and cleaned sources: ::
+still safe. It will compile 'bad' and 'cleaned' source files: ::
 
     make css
 

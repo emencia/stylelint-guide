@@ -1,5 +1,5 @@
 ///
-// Main frontend layout styles
+// Demonstration of lint rules with invalid content
 //
 //
 ///
@@ -42,6 +42,10 @@ H1 {
 
 .font-family-no-missing-generic-family-keyword {
     font-family: "Nunito Sans";
+}
+
+.number-leading-zero {
+    padding: .3rem;
 }
 
 .function-parentheses-space-inside {
@@ -110,9 +114,19 @@ $card-body-height:172px;
 }
 
 .length-zero-no-unit {
-    box-shadow: 0 0 0px 5px #ffffff;
+    box-shadow: 0 0 0px 5px $white;
 }
 
+.color-named {
+    color: white;
+}
+
+.color-no-hex {
+    color: #ffffff;
+}
+
+// Check for valid hex format in case it is allowed
+/* stylelint-disable color-no-hex */
 .color-hex-case {
     color: #FFFFFF;
 }
@@ -120,10 +134,7 @@ $card-body-height:172px;
 .color-hex-length {
     color: #fff;
 }
-
-.color-named {
-    color: white;
-}
+/* stylelint-enable color-no-hex */
 
 .no-duplicate-selectors {
     .foo {
@@ -177,28 +188,5 @@ $card-body-height:172px;
 .selector-pseudo-element-colon-notation {
     &:after {
         font-size: 1rem;
-    }
-}
-
-.valid-but-to-watch {
-    .at-extend-no-missing-placeholder {
-        a {
-            @extend #{".bg-grey",".text-black"};
-
-            &:hover {
-                @extend #{".text-white"};
-            }
-        }
-    }
-
-    .no-duplicate-selectors-allowed {
-        .foo,
-        .bar {
-            color: $white;
-        }
-
-        .foo {
-            color: $grey;
-        }
     }
 }

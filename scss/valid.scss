@@ -1,9 +1,8 @@
 /*
- * Multiline comment
+ * Good practices demonstration
  *
  * Plop
  */
-
 // Basic single line comment
 
 /// Single line comment for sassdoc
@@ -89,7 +88,8 @@
     border-width: 0.5;
 }
 
-// Color in long hexa and lowercase
+// Color in long hexa and lowercase when allowed
+/* stylelint-disable color-no-hex */
 .colors {
     $black: #000000;
 
@@ -98,16 +98,17 @@
     border-right-color: rgb(255, 0, 0);
     border-top-color: rgba($black, 1);
 }
+/* stylelint-enable color-no-hex */
 
 // Multiline declaration
 .b {
-    color: #ffffff;
+    color: $white;
     top: 0;
 }
 
 // Blocks
-a { color: #ffffff; }
-b { color: #000000; }
+a { color: $white; }
+b { color: $black; }
 
 // No spaces in operator and value is double quoted
 a[target="_blank"] {
