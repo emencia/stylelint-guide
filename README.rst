@@ -109,3 +109,28 @@ where you will run Stylelint, commonly like this: ::
 Or for automatic fix: ::
 
     npx stylelint --fix "scss/**/*.scss"
+
+Explanations
+************
+
+The configuration makes some pragmatic choices, here there are explanations about some
+of them.
+
+declaration-block-no-redundant-longhand-properties
+    Disabled for 'flex' property for compatibility with IE11.
+scss/no-global-function-names
+    Disabled for compatibility with Node Sass which don't implement ``@use`` and
+    modules like ``map.get`` (instead of ``map-get``);
+scss/at-if-no-null
+    Disabled because ``null`` is useful to test function argument value.
+color-no-hex
+    Enabled because all defined color codes should be in a unique palette file (like
+    settings) and not be scattered through many files.
+
+    Still, some hex color rules are configured for where hex colors are allowed.
+no-descending-specificity
+    Disabled because this rule is for specific CSS technics like BEM which avoid
+    nested selector.
+
+Other rules are some opiniotated choices especially about indentation, line and block
+syntax.
