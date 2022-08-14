@@ -1,6 +1,7 @@
 ///
 // Currently valid rules but watched for lint fixes
 ///
+@import "./requirements";
 
 
 // We still accept @extend without placeholder until Bootstrap5 have added them
@@ -16,5 +17,5 @@
 
 // There is currently no available rule to enforce a space after comma in this case
 .missing-space-after-comma {
-    @extend #{".bg-blue-secondary",".text-white"};
+    @extend #{".bg-grey",".text-white"};
 }
