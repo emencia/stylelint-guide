@@ -127,10 +127,29 @@ color-no-hex
     Enabled because all defined color codes should be in a unique palette file (like
     settings) and not be scattered through many files.
 
-    Still, some hex color rules are configured for where hex colors are allowed.
+    However there are some hex color rules still configured for where hex colors are
+    allowed.
 no-descending-specificity
     Disabled because this rule is for specific CSS technics like BEM which avoid
     nested selector.
+alpha-value-notation
+    Set to ``number`` because the ``percent`` notation is only compatible with
+    dart-sass.
+
+    **Warning:** `Sass overrides <https://sass-lang.com/documentation/modules#global-functions>`_
+    the ``rgb`` and ``rgba`` CSS native functions as a feature to resolve non
+    "red-green-blue declaration" like ``rgb($black)`` or ``rgb(#000000)`` to a
+    "red-green-blue declaration" ``rgb(0, 0, 0)`` that is the only one allowed from CSS
+    specifications.
+
+    It results that Styleguide won't be able to detect the percent notation with non
+    "red-green-blue" declaration. A value like ``rgba($black, 15%)`` won't be detected
+    as an error.
+
+    This is the same behavior with ``hsl`` and ``hsla``
+
+    We recommend to define transparent colors from variable once in settings if
+    possible, so it will reduce chances to miss a wrong percent notation.
 
 Other rules are some opiniotated choices especially about indentation, line and block
 syntax.

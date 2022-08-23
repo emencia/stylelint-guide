@@ -125,7 +125,15 @@ $card-body-height:172px;
     color: #ffffff;
 }
 
-// Check for valid hex format in case it is allowed
+.alpha-value-notation-rgb {
+    color: rgba(0, 0, 0, 15%);
+}
+
+.alpha-value-notation-variable {
+    color: rgba($black, 15%);
+}
+
+// Checks for when valid hex format is allowed
 /* stylelint-disable color-no-hex */
 .color-hex-case {
     color: #FFFFFF;
